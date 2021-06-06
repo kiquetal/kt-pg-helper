@@ -20,7 +20,6 @@ class Connect {
         @JvmStatic
        fun main(args: Array<String>) {
             var logger = LoggerFactory.getLogger(Connect::class.java)
-
             val postgres = createClient()
             val conn =   postgres.connect()
             val result=    conn.get().sendPreparedStatement("select * from artist");
